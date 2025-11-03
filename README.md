@@ -44,10 +44,10 @@ Go to your forked repository on GitHub and click **New Pull Request** to propose
 To run the unit tests, use the following command in your terminal:
 
 ```
-python -m unittest test_calculator.py
+python -m unittest test_shapes.py
 ```
 
-This will execute all the tests in `test_calculator.py` and show the results.
+This will execute all the tests in `test_shapes.py` and show the results.
 
 ---
 
