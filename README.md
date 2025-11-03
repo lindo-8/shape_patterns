@@ -1,6 +1,6 @@
 # Python - Shape Pattern
 
-This project is a shape pattern implemented in Python, with unit tests to verify its functionality.
+An assessment project where students write Python functions to draw geometric shapes and calculate their areas, validated through automated unit tests.
 
 ## Getting Started
 
