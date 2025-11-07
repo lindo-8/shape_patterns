@@ -11,8 +11,8 @@ def area_square(side:int)->int:
     Returns:
         int: The area of the square.
     """
-    
-    return 0
+    area = side*side
+    return area
 
 
 def area_triangle(base:int, height:int)->float:
@@ -27,8 +27,8 @@ def area_triangle(base:int, height:int)->float:
     Returns:
         float: The area of the triangle.
     """
-    
-    return 0.0
+    area = 1/2 * base * height
+    return area
 
 def area_circle(radius:int)->float:
     
@@ -41,8 +41,8 @@ def area_circle(radius:int)->float:
     Returns:
         float: The area of the circle.
     """
-    
-    return 0.0
+    area =  3.142 * radius **2
+    return area
 
 def area_rectangle(length:int, width:int)->int:
     
@@ -56,8 +56,8 @@ def area_rectangle(length:int, width:int)->int:
     Returns:
         int: The area of the rectangle.
     """
-    
-    return 0
+    area = length*width
+    return area
 
 
 # TODO: Complete the required shapes below
@@ -74,7 +74,10 @@ def draw_square(height:int)->None:
         None: Prints the square pattern directly to console.
         
     """
-    pass
+    for i in range(1,height+1):
+        for j in range(1,i+1):
+            print(j*height*"*", end=" ")
+        print(" ")
 
 
 
@@ -91,8 +94,11 @@ def draw_triangle(height:int)->None:
     
         
     """
+    for i in range(height+2):
+        for k in range(1,i, + 1):
+            print(k, end=" ")
+        print(" ")
     
-    pass
 
 def draw_triangle_reversed(height:int)->None:
     
@@ -108,8 +114,11 @@ def draw_triangle_reversed(height:int)->None:
         
 
     """
+    for i in range(height,0,-1):
+        for j in range(1,i+1):
+            print(j, end=" ")
+        print(" ")
     
-    pass
 
 # TODO: BONUS QUESTION
 def draw_pyramid(height:int)->None:
@@ -124,8 +133,11 @@ def draw_pyramid(height:int)->None:
         None: Prints the pyramid pattern directly to console.
         
     """
-    
-    pass
+    #minus spaces from the beginning
+    for i in range(height+2):
+        for k in range(1,i, + 1):
+            print(k*"*", end=" ")
+        print(" ")
          
                 
 # TODO: add support for other shapes
@@ -146,7 +158,15 @@ def draw(shape:str, height:int)->None:
     Returns:
         None: Prints the requested shape pattern directly to console.
     """
-    
+    for i in range(1,height+1):
+        for k in range(1,i+1):
+            print(k, end=" ")
+        print(" ")
+        
     if shape == "square":
         draw_square(height)
 
+# print(area_triangle(4, 5))
+# draw_square(5)
+# draw_pyramid(5)
+draw("square", 5)
